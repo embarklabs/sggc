@@ -1,0 +1,6 @@
+.embark/
+node_modules/
+build/
+config/production/password
+config/livenet/password
+chains.json
