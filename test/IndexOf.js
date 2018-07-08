@@ -6,12 +6,16 @@
  */
 
 var testdata = require('../data/IndexOf.json');
+const IndexOf = require('Embark/contracts/IndexOf');
 
-describe("IndexOf", function() {
+config({
+	contracts: {
+		IndexOf: {}
+	}
+});
+
+contract("IndexOf", function() {
   this.timeout(0);
-  before(function(done) {
-    EmbarkSpec.deployAll({"IndexOf": {}}, () => { done() });
-  });
 
   testdata.vectors.forEach(function(v, i) {
     it("Passes test vector " + i, async function() {

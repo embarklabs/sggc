@@ -6,12 +6,16 @@
  */
 
 var testdata = require('../data/BrainFuck.json');
+const BrainFuck = require('Embark/contracts/BrainFuck');
 
-describe("BrainFuck", function() {
+config({
+	contracts: {
+		BrainFuck: {}
+	}
+});
+
+contract("BrainFuck", function() {
   this.timeout(0);
-  before(function(done) {
-    EmbarkSpec.deployAll({"BrainFuck": {}}, () => { done() });
-  });
 
   testdata.vectors.forEach(function(v, i) {
     it("Passes test vector " + i, async function() {

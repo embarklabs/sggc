@@ -6,12 +6,16 @@
  */
 
 var testdata = require('../data/Sort.json');
+const Sort = require('Embark/contracts/Sort');
 
-describe("Sort", function() {
+config({
+	contracts: {
+		Sort: {}
+	}
+});
+
+contract("Sort", function() {
   this.timeout(0);
-  before(function(done) {
-    EmbarkSpec.deployAll({"Sort": {}}, () => { done() });
-  });
 
   testdata.vectors.forEach(function(v, i) {
     it("Passes test vector " + i, async function() {

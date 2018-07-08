@@ -6,12 +6,16 @@
  */
 
 var testdata = require('../data/HexDecoder.json');
+const HexDecoder = require('Embark/contracts/HexDecoder');
 
-describe("HexDecoder", function() {
+config({
+	contracts: {
+		HexDecoder: {}
+	}
+});
+
+contract("HexDecoder", function() {
   this.timeout(0);
-  before(function(done) {
-    EmbarkSpec.deployAll({"HexDecoder": {}}, () => { done() });
-  });
 
   testdata.vectors.forEach(function(v, i) {
     it("Passes test vector " + i, async function() {

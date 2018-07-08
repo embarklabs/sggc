@@ -10,6 +10,6 @@
   "homepage": "",
   "requires": true,
   "devDependencies": {
-    "embark": "^3.0.6"
+    "embark": "^3.1.5"
   }
 }

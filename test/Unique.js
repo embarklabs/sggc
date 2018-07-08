@@ -6,12 +6,16 @@
  */
 
 var testdata = require('../data/Unique.json');
+const Unique = require('Embark/contracts/Unique');
 
-describe("Unique", function() {
+config({
+	contracts: {
+		Unique: {}
+	}
+});
+
+contract("Unique", function() {
   this.timeout(0);
-  before(function(done) {
-    EmbarkSpec.deployAll({"Unique": {}}, () => { done() });
-  });
 
   testdata.vectors.forEach(function(v, i) {
     it("Passes test vector " + i, async function() {
