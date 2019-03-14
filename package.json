@@ -1,6 +1,6 @@
 {
   "name": "sggc",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "",
   "scripts": {
     "test": "embark test"
@@ -9,7 +9,10 @@
   "license": "ISC",
   "homepage": "",
   "requires": true,
+  "dependencies": {
+    "embarkjs-connector-web3": "4.0.0"
+  },
   "devDependencies": {
-    "embark": "^3.1.5"
+    "embark": "4.0.0"
   }
 }
