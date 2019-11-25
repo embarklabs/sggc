@@ -14,8 +14,9 @@ Clone this repository and install its dependencies:
 
 ```
 git clone https://github.com/embark-framework/sggc.git
-npm install -g embark
+npm install -g embark@4.1.1
 ```
+**Please note:** Support for this template has been deprecated in Embark v5.
 
 ## Usage
 
